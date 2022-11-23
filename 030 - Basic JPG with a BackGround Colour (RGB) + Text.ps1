@@ -18,8 +18,12 @@ for ($y = 0; $y -lt $bmp.Height; $y++) {
         }
     }
 
+# Set Up Graphics Buffer
+
 $Graphics = [system.drawing.Graphics]::FromImage($bmp)
 $Graphics.TextRenderingHint = 'AntiAliasGridFit'
+
+# Set Up Font Information
 
 $Text ="Example"
 $FontName = "Arial"
@@ -29,6 +33,8 @@ $TextPosition_Left = 100
 $TextPosition_Top = 100
 
 $Font = new-object System.Drawing.Font($FontName, $FontSize)
+
+# Overlay Text with Font
 
 $Graphics.DrawString($Text,$Font,$TextColour,$TextPosition_Left,$TextPosition_Top)
 
