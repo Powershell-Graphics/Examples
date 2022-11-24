@@ -40,7 +40,6 @@ $bmp.Save($OutputFile)
 # Tidy Up
 
 $bmp.Dispose()
-$graphics.Dispose()
 
 # Open File When Finished
 
