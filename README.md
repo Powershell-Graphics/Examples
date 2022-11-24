@@ -21,4 +21,4 @@ Basic Image File with a set RBG BG Colour
 ---
 
 Basic Image File with a set RBG BG Colour
-  Experimenting with TINT options and dividing into 10 sections
+  Experimenting with TINT options and dividing into x sections
