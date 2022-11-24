@@ -24,9 +24,9 @@ for ($y = 0; $y -lt $bmp.Height; $y++) {
         for ($x = $Lower; $x -lt $Upper; $x++) {
            
                 $tint_factor = 1/($z+1)
-                $varR  = $RGBR + (255 - 68) * $tint_factor
-                $varG = $RGBG + (255 - 0) * $tint_factor
-                $varB = $RGBB + (255 - 153) * $tint_factor
+                $varR  = $RGBR + (255 - $RGBR) * $tint_factor
+                $varG = $RGBG + (255 - $RGBG) * $tint_factor
+                $varB = $RGBB + (255 - $RGBB) * $tint_factor
                 $bmp.SetPixel($x, $y, [System.Drawing.Color]::FromArgb($varR, $varG, $varB))
                 
         }
