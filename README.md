@@ -16,3 +16,9 @@ Basic Image File with a set RBG BG Colour
 
 Basic Image File with a set RBG BG Colour
   Overlay Text with FONT/Font Size
+
+040
+---
+
+Basic Image File with a set RBG BG Colour
+  Experimenting with TINT options and dividing into 10 sections
