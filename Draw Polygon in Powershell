@@ -1,0 +1,37 @@
+#setup vars
+
+$OutputFile = "C:\Users\cs1dah\Downloads\result.jpg"
+
+$bmp = new-object System.Drawing.Bitmap 400,400
+
+$brushWhite = [System.Drawing.Brushes]::White
+$brushBlack = [System.Drawing.Brushes]::Red
+
+$graphics = [System.Drawing.Graphics]::FromImage($bmp) 
+$graphics.FillRectangle($brushBg,0,0,$bmp.Width,$bmp.Height)
+
+#define points
+
+[System.Drawing.Point]$pt1 = [System.Drawing.Point]::new(50,50)
+[System.Drawing.Point]$pt2 = [System.Drawing.Point]::new(100,25)
+[System.Drawing.Point]$pt3 = [System.Drawing.Point]::new(200,5)
+[System.Drawing.Point]$pt4 = [System.Drawing.Point]::new(250,50);
+[System.Drawing.Point]$pt5 = [System.Drawing.Point]::new(300,100);
+[System.Drawing.Point]$pt6 = [System.Drawing.Point]::new(350,200);
+[System.Drawing.Point]$pt7 = [System.Drawing.Point]::new(250,250);
+
+#create array of points
+
+[System.Drawing.Point[]]$PolyPoints = ($pt1,$pt2,$pt3,$pt4,$pt5,$pt6,$pt7)
+
+$graphics.FillPolygon($brushBlack, $PolyPoints)
+
+$bmp.Save($OutputFile) 
+
+# Tidy Up
+
+$bmp.Dispose()
+
+# launch Output file 
+
+& $OutputFile
